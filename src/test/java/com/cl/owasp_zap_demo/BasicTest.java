@@ -4,11 +4,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.annotations.Test;
 
-public class SeleniumDemo {
+public class BasicTest {
+  @Test
+  public void f() {
 
-	
-	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		String PROXY = "localhost:8090";
 		System.setProperty("webdriver.gecko.driver", "geckodriver");
@@ -23,8 +24,9 @@ public class SeleniumDemo {
 
 		WebDriver driver = new FirefoxDriver(capabilities);
 		driver.get("http://localhost:8080/login?from=%2F");
-		SimpleZAPExample.main(args);
+		
+		SimpleZAPExample.main(null);
 
-	}
-
+	
+  }
 }
