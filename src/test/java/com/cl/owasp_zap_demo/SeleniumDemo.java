@@ -21,13 +21,13 @@ public class SeleniumDemo {
 		proxy.setHttpProxy(PROXY)
 		     .setFtpProxy(PROXY)
 		     .setSslProxy(PROXY);
-		DesiredCapabilities capabilities = new DesiredCapabilities();
+		DesiredCapabilities capabilities = new DesiredCapabilities().firefox();
 		capabilities.setCapability(CapabilityType.PROXY, proxy);
 		capabilities.setCapability("marionette", true);
 
 		WebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), capabilities);
 		driver.get("http://localhost:8080/login?from=%2F");
-		SimpleZAPExample.main(args);
+		//SimpleZAPExample.main(args);
 
 	}
 

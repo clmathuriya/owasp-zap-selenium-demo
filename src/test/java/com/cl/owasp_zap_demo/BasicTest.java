@@ -16,14 +16,14 @@ public class BasicTest {
 
 		// TODO Auto-generated method stub
 		String PROXY = "localhost:8090";
-		System.setProperty("webdriver.gecko.driver", "geckodriver");
+		System.setProperty("webdriver.gecko.driver", "geckodriver_linux");
 
 		org.openqa.selenium.Proxy proxy = new org.openqa.selenium.Proxy();
 		proxy.setHttpProxy(PROXY)
 		     .setFtpProxy(PROXY)
 		     .setSslProxy(PROXY);
 		DesiredCapabilities capabilities = new DesiredCapabilities();
-		capabilities.setCapability(CapabilityType.PROXY, proxy);
+//		capabilities.setCapability(CapabilityType.PROXY, proxy);
 		capabilities.setCapability("marionette", true);
 
 		WebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), capabilities);
