@@ -29,7 +29,29 @@ public class BasicTest {
 		capabilities.setCapability(CapabilityType.BROWSER_NAME, "chrome");
 
 		WebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), capabilities);
-		driver.get("http://localhost:8080/login?from=%2F");
+		driver.get("http://newtours.demoaut.com/");
+		driver.quit();
 		//SimpleZAPExample.main(null);
+  }
+  @Test(enabled=false)
+  public void firefoxTest() throws MalformedURLException {
+
+        // TODO Auto-generated method stub
+        String PROXY = "localhost:8090";
+        System.setProperty("webdriver.gecko.driver", new File("geckodriver_mac").getAbsolutePath());
+
+        org.openqa.selenium.Proxy proxy = new org.openqa.selenium.Proxy();
+        proxy.setHttpProxy(PROXY)
+             .setFtpProxy(PROXY)
+             .setSslProxy(PROXY);
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setCapability(CapabilityType.PROXY, proxy);
+        capabilities.setCapability("marionette", true);
+        capabilities.setCapability(CapabilityType.BROWSER_NAME, "firefox");
+
+        WebDriver driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), capabilities);
+        driver.get("http://newtours.demoaut.com/");
+        driver.quit();
+        //SimpleZAPExample.main(null);
   }
 }
