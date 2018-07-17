@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="2916" started-at="2018-07-17T12:24:33Z" finished-at="2018-07-17T12:24:36Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="2916" started-at="2018-07-17T12:24:33Z" finished-at="2018-07-17T12:24:36Z">
+      <class name="com.cl.owasp_zap_demo.BasicTest">
+        <test-method status="PASS" signature="demo()[pri:0, instance:com.cl.owasp_zap_demo.BasicTest@5034c75a]" name="demo" duration-ms="2896" started-at="2018-07-17T17:54:33Z" finished-at="2018-07-17T17:54:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- demo -->
+      </class> <!-- com.cl.owasp_zap_demo.BasicTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
